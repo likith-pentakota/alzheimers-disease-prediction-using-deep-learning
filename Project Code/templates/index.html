@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alzheimer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧠 Alzheimer's Disease Prediction</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="image" required>
+
+        <select name="model">
+            <option value="efficientnet">EfficientNet (Best)</option>
+            <option value="cnn">CNN</option>
+            <option value="resnet">ResNet50</option>
+        </select>
+
+        <button type="submit">Predict</button>
+
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧠 Prediction Result</h1>
+
+    <img src="{{ image }}" width="300">
+
+    <h2>Prediction: {{ prediction }}</h2>
+    <h3>Confidence: {{ confidence }}%</h3>
+
+    {% if gradcam %}
+        <h3>Grad-CAM</h3>
+        <img src="{{ gradcam }}" width="300">
+    {% endif %}
+
+    <a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>

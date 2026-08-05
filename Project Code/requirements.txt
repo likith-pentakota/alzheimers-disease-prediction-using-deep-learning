@@ -1,0 +1,7 @@
+flask
+tensorflow
+numpy
+pillow
+matplotlib
+opencv-python
+joblib
